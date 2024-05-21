@@ -3,8 +3,10 @@ website should have a well-developed HTML structure and follow good visual desig
 ation.
 
 Technical Requirements
-The requirements listed below are absolute minimums. Ensure that your website meets these requirements before attempting to further expand features.
-HTML Requirements
+The requirements listed below are absolute minimums. Ensuring that the  website meets these requirements before attempting to further expand features.
+
+HTML Requirements:
+
 Have at least three pages.
 Keep the grid system consistent between pages as much as possible.
 Use at least ten different HTML tags.
@@ -16,7 +18,9 @@ Text.
 Images.
 GIFs.
 (See resource links above for some free content of each of these types.)
-CSS Requirements
+
+CSS Requirements:
+
 Make use of inline, internal, and external styling.
 Use five different CSS selectors.
 Use colors that complement each other.
