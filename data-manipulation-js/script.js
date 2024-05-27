@@ -35,6 +35,7 @@ const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
 // Finally, log the results.
 console.log(isValid);
 
+
 // Here's another example of how this COULD be done,
 // but it SHOULD NOT be done this way. As programmers,
 // we break things into small, manageable pieces so that
@@ -43,3 +44,24 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
   ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
   !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
   (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+  
+//   Check if all numbers are divisible by 5. Cache the result in a variable.
+const divisibleByFive = (n1 % 5) + (n2 % 5) + (n3 % 5) + (n4 % 5) == 0;
+console.log(`are all numbers divisible by 5?:${divisibleByFive}`);
+// Check if the first number is larger than the last. Cache the result in a variable.
+const isFirstLargerThanLast = n1 > n4;
+console.log(`is the first number larger than the last number?:${isFirstLargerThanLast}`);
+
+// Accomplish the following arithmetic chain:
+// Subtract the first number from the second number.
+const SubtractFirstFromSecond = n2 - n1;
+console.log(`Subtract First number From Second: ${n2} - ${n1} = ${SubtractFirstFromSecond}`);
+// Multiply the result by the third number.
+const resultMultipliedByThird = SubtractFirstFromSecond * n3;
+console.log(`result multiplied by third number is :${SubtractFirstFromSecond} * ${n3} = ${resultMultipliedByThird}`);
+// Find the remainder of dividing the result by the fourth number.
+const dividingResultByFourth = resultMultipliedByThird / n4;
+console.log(`dividing Result By Fourth number: ${resultMultipliedByThird} /${n4} = ${dividingResultByFourth}`);
+// Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
+const allUnderOrEqual25 = n1 <= 25 && n2 <= 25 && n3 <= 25 && n4 <= 25;
+console.log(` are all numbers Under Or Equal 25 :${allUnderOrEqual25}`);
