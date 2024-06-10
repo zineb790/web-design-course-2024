@@ -71,6 +71,12 @@ const startingPlantsLarger = 100;
 const weeksLarger = 10;
 const plantCountLarger = predictGrowth(startingPlantsLarger, weeksLarger);
 console.log(plantCountLarger);
-// Calculate the area required
+// Calculating the area required
 const requiredArea = plantCountLarger * minSpacePerPlant;
 console.log(requiredArea);
+// Calculating the new radius for the expanded circular garden
+const newRadius = Math.sqrt(requiredArea / PI);
+console.log(`After ${weeksLarger} weeks with 100 starting plants:`);
+console.log(`Plant count: ${plantCountLarger}`);
+console.log(`Required area: ${requiredArea.toFixed(2)} square meters`);
+console.log(`New radius: ${newRadius.toFixed(2)} meters`);
