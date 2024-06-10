@@ -28,7 +28,7 @@
 // Use try and catch to wrap your work in an error-handling block. If the amount of space required to hold the originally provided number of plants exceeds the amount of space available, throw a new error and log an appropriate message.
 ///////////////////////////////////////////////
 
-// Part 1: Growing Pains
+// Part 1: Growing Pains///
 //defining parameters 
 const PI = 3.1415;
 const radius = 5;
@@ -64,3 +64,13 @@ for (let weeks = 1; weeks <= 3; weeks++){
     console.log(`After ${weeks} week(s): ${plantCount} plants - Decision: ${decision}`);
 
 }
+//Part 2: Thinking Bigger//
+
+//in case startingPlants 100
+const startingPlantsLarger = 100;
+const weeksLarger = 10;
+const plantCountLarger = predictGrowth(startingPlantsLarger, weeksLarger);
+console.log(plantCountLarger);
+// Calculate the area required
+const requiredArea = plantCountLarger * minSpacePerPlant;
+console.log(requiredArea);
