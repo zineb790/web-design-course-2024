@@ -80,3 +80,20 @@ console.log(`After ${weeksLarger} weeks with 100 starting plants:`);
 console.log(`Plant count: ${plantCountLarger}`);
 console.log(`Required area: ${requiredArea.toFixed(2)} square meters`);
 console.log(`New radius: ${newRadius.toFixed(2)} meters`);
+
+//Part 3: Errors in Judgement//
+try {
+    const STARTING_PLANTS_ERROR = 100;
+    const plantCountError = predictGrowth(STARTING_PLANTS_ERROR, 10);
+    const requiredAreaError = plantCountError * minSpacePerPlant;
+
+    if (requiredAreaError > area) {
+        throw new Error(`Required area ${requiredAreaError.toFixed(2)} sq meters exceeds available ${area.toFixed(2)} sq meters.`);
+    } else {
+        console.log(`After 10 weeks with 100 starting plants:`);
+        console.log(`Plant count: ${plantCountError}`);
+        console.log(`Required area: ${requiredAreaError.toFixed(2)} square meters`);
+    }
+} catch (error) {
+    console.error(error.message);
+}
