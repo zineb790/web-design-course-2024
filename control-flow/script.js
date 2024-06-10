@@ -56,3 +56,11 @@ function growthDecision(plantCount) {
     }
 }
 console.log(growthDecision(80));
+
+//showcasing results for 1 , 2 and three weeks
+for (let weeks = 1; weeks <= 3; weeks++){
+    const plantCount = predictGrowth(startingPlants, weeks);
+    const decision = growthDecision(plantCount);
+    console.log(`After ${weeks} week(s): ${plantCount} plants - Decision: ${decision}`);
+
+}
