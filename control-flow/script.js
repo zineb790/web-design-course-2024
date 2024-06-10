@@ -44,3 +44,15 @@ function predictGrowth(startingPlants ,weeks) {
     return startingPlants * Math.pow(2, weeks);
 }
 console.log(predictGrowth(20, 2));
+//function to decide wether to prune, monitor or plant more plants
+function growthDecision(plantCount) {
+    if (plantCount > capacity80Percent) {
+        return "pruned";
+        
+    } else if (plantCount > capacity50Percent) {
+        return "monitored"
+    } else {
+        return "planted"
+    }
+}
+console.log(growthDecision(80));
