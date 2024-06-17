@@ -75,8 +75,7 @@ const LearnerSubmissions = [
     }
   }
 ];
-//accessing last element of the array score.
-console.log(LearnerSubmissions[LearnerSubmissions.length - 1].submission.score);
+
 
 function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
   //  processing data to achieve the desired result.
@@ -179,7 +178,31 @@ for (let i = 0; i <= result.length;i++){
     console.log(result);
 }
 //7-Utilize at least one loop control keyword such as break or continue.
-//8-Create and/or manipulate arrays and objects.
+
+////8-Create and/or manipulate arrays and objects./////
+
+console.log("manipulating LearnerSubmissions array: ");
+console.log("accessing last element")
+// ===> accessing last element of the array score.
+console.log(LearnerSubmissions[LearnerSubmissions.length - 1].submission.score);
+console.log("adding new object using push:")
+//===>adding new object to my array using push 
+const newLearner=LearnerSubmissions.push={name:"hello i am a new learner"}
+console.log(newLearner);
+console.log(LearnerSubmissions);
+console.log("adding to index 0  :")
+//add an object to the start of the array using unshift
+const addNewObjectToStart = LearnerSubmissions.unshift({name :'i am first learner'})
+console.log(addNewObjectToStart);
+console.log(LearnerSubmissions);
+console.log("removing from index 0 :")
+//===>removing the first object using shift
+const removeFirstObject = LearnerSubmissions.shift();
+console.log(removeFirstObject);
+console.log(LearnerSubmissions);
+
+
+
 
 //9-Demonstrate the retrieval, manipulation, and removal of items in an array or properties in an object.
 //10-Use functions to handle repeated tasks.
