@@ -101,7 +101,7 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
       id: 132,
       avg: 0.82, // (39 + 125) / (50 + 150)
       1: 0.78, // 39 / 50
-     2: 0.833, // late: (140 - 15) / 150
+      2: 0.833, // late: (140 - 15) / 150
      isScoreGood: function () {
        const avgThreshold = 0.75;
        if (this.avg > avgThreshold) {
@@ -122,8 +122,34 @@ const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
 console.log(result);
 
 
+
+
+
+
+
 // 1-Declare variables properly using let and const where appropriate.
 //2-Use operators to perform calculations on variables and literals.
+//how we got avg
+//for learner_id :125
+//for course id 1 and 2
+//LearnerSubmissions is an [{{score}},{score}]
+//assignmentGroup { [{ possible_point }, {possible_points}, {}] }
+//avg: 0.985, // (47 + 150) / (50 + 150)
+//accessing and console.log data
+console.log(LearnerSubmissions[0].submission.score);
+console.log(LearnerSubmissions[1].submission.score);
+console.log(AssignmentGroup.assignments[0].points_possible);
+console.log(AssignmentGroup.assignments[1].points_possible);
+
+function calculateAvg() {
+let testScores=LearnerSubmissions[0].submission.score+LearnerSubmissions[1].submission.score;
+let testPossiblePoints=AssignmentGroup.assignments[0].points_possible+AssignmentGroup.assignments[1].points_possible;
+    let testAvg = testScores / testPossiblePoints;
+    console.log(`the average of the submitted assingment 1 and 2 is :${testAvg}`);
+return testAvg;
+}
+console.log(calculateAvg());
+
 //3-Use strings, numbers, and Boolean values cached within variables.
 //4-Use at least two if/else statements to control program flow. Optionally, use at least one switch statement.
 function isScoreGood(avg) {
@@ -138,7 +164,10 @@ function isScoreGood(avg) {
 }
 
 console.log(isScoreGood(0.45));
+
 //5-Use try/catch statements to manage potential errors in the code, such as incorrectly formatted or typed data being fed into your program.
+// Test the isScoreGood method for each learner
+ 
 
 //6-Utilize at least two different types of loops.
 //===> Testing the isScoreGood method for each learner
@@ -151,5 +180,6 @@ for (let i = 0; i <= result.length;i++){
 }
 //7-Utilize at least one loop control keyword such as break or continue.
 //8-Create and/or manipulate arrays and objects.
+
 //9-Demonstrate the retrieval, manipulation, and removal of items in an array or properties in an object.
 //10-Use functions to handle repeated tasks.
