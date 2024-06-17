@@ -121,16 +121,34 @@ const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
 
 console.log(result);
 
-// Test the isScoreGood method for each learner
-result.forEach((learner) => {
-  console.log(`Learner ID: ${learner.id}, Is Score Good? ${learner.isScoreGood()}`);
-});
+
 // 1-Declare variables properly using let and const where appropriate.
 //2-Use operators to perform calculations on variables and literals.
 //3-Use strings, numbers, and Boolean values cached within variables.
 //4-Use at least two if/else statements to control program flow. Optionally, use at least one switch statement.
+function isScoreGood(avg) {
+    const avgThreshold = 0.75;
+    if (avg>avgThreshold) {
+        console.log("good work");
+        return true;
+    } else {
+        console.log("needs extra help");
+        return false;
+    }
+}
+
+console.log(isScoreGood(0.45));
 //5-Use try/catch statements to manage potential errors in the code, such as incorrectly formatted or typed data being fed into your program.
+
 //6-Utilize at least two different types of loops.
+//===> Testing the isScoreGood method for each learner
+result.forEach((learner) => {
+  console.log(`Learner ID: ${learner.id}, Is Score Good? ${learner.isScoreGood()}`);
+});
+for (let i = 0; i <= result.length;i++){
+
+    console.log(result);
+}
 //7-Utilize at least one loop control keyword such as break or continue.
 //8-Create and/or manipulate arrays and objects.
 //9-Demonstrate the retrieval, manipulation, and removal of items in an array or properties in an object.
