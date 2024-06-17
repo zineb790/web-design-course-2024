@@ -120,21 +120,16 @@ const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
 
 console.log(result);
 
-
-
-
-
+//meeting Requirement:
 
 
 // 1-Declare variables properly using let and const where appropriate.
 //2-Use operators to perform calculations on variables and literals///
-//how we got avg
-//for learner_id :125
-//for course id 1 and 2
-//LearnerSubmissions is an [{{score}},{score}]
-//assignmentGroup { [{ possible_point }, {possible_points}, {}] }
+// ===>how we got avg for learner_id :125 courses id 1 and 2
+//LearnerSubmissions is an array of objects [{{score}},{score}]
+//assignmentGroup is an object of array of objects { [{ possible_point }, {possible_points}, {}] }
 //avg: 0.985, // (47 + 150) / (50 + 150)
-//accessing and console.log data
+//accessing and testing using console.log 
 console.log(LearnerSubmissions[0].submission.score);
 console.log(LearnerSubmissions[1].submission.score);
 console.log(AssignmentGroup.assignments[0].points_possible);
@@ -150,6 +145,7 @@ return testAvg;
 console.log(calculateAvg());
 
 //3-Use strings, numbers, and Boolean values cached within variables.
+
 //4-Use at least two if/else statements to control program flow. Optionally, use at least one switch statement.
 function isScoreGood(avg) {
     const avgThreshold = 0.75;
@@ -185,20 +181,43 @@ console.log(checkScore(0.76));
 
 
 //5-Use try/catch statements to manage potential errors in the code, such as incorrectly formatted or typed data being fed into your program.
-// Test the isScoreGood method for each learner
- 
+function calculateScores(submissions, assignments) {
+  const learners = {};
 
-//6-Utilize at least two different types of loops.
+  try {
+    submissions.forEach(({ learner_id, assignment_id, submission: { score } }) => {
+      const assignment = assignments.find(a => a.id === assignment_id);
+      if (!assignment) {
+        throw new Error(`Assignment with id ${assignment_id} not found.`);
+      }
+
+      if (!learners[learner_id]) {
+        learners[learner_id] = { id: learner_id, scores: {}, totalScore: 0, totalPossible: 0 };
+      }
+
+      learners[learner_id].scores[assignment_id] = score / assignment.points_possible;
+      learners[learner_id].totalScore += score;
+      learners[learner_id].totalPossible += assignment.points_possible;
+    });
+  } catch (error) {
+    console.error("An error occurred while calculating scores:", error.message);
+  }
+
+  return learners;
+}
+console.log(calculateScores(1,47));
+//6-Utilize at least two different types of loops////
 //===> Testing the isScoreGood method for each learner
+//foreach loo[]
 result.forEach((learner) => {
   console.log(`Learner ID: ${learner.id}, Is Score Good? ${learner.isScoreGood()}`);
 });
+//for loop
 for (let i = 0; i <= result.length;i++){
 
     console.log(result);
 }
 //7-Utilize at least one loop control keyword such as break or continue.
-
 ////8-Create and/or manipulate arrays and objects./////
 
 console.log("manipulating LearnerSubmissions array: ");
