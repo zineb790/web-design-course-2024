@@ -1,0 +1,14 @@
+Using a live example to show a specific set of input data:
+https://www.canva.com/link?target=https%3A%2F%2Fcodesandbox.io%2Fp%2Fsandbox%2Fsba-308-example-26sg4j%3Ffrom-embed%3D&design=DAFxJzEGlWs&accessRole=viewer&linkSource=document
+Requirement:
+/ 1-Declare variables properly using let and const where appropriate.
+//2-Use operators to perform calculations on variables and literals
+//3-Use strings, numbers, and Boolean values cached within variables.
+//4-Use at least two if/else statements to control program flow. Optionally, use at least one switch statement.
+//5-Use try/catch statements to manage potential errors in the code, such as incorrectly formatted or typed data being fed into your program.
+//6-Utilize at least two different types of loops
+//7-Utilize at least one loop control keyword such as break or continue.
+////8-Create and/or manipulate arrays and objects.
+//9-Demonstrate the retrieval, manipulation, and removal of items in an array or properties in an object.
+//10-Use functions to handle repeated tasks.
+
