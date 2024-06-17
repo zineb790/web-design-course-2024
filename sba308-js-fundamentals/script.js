@@ -127,7 +127,7 @@ console.log(result);
 
 
 // 1-Declare variables properly using let and const where appropriate.
-//2-Use operators to perform calculations on variables and literals.
+//2-Use operators to perform calculations on variables and literals///
 //how we got avg
 //for learner_id :125
 //for course id 1 and 2
@@ -163,6 +163,26 @@ function isScoreGood(avg) {
 }
 
 console.log(isScoreGood(0.45));
+
+//adding switch statment
+
+const checkScore = (score) => {
+  switch (true) {
+    case (score >= 0.90):
+      console.log("Excellent");
+      break;
+    case (score >= 0.75):
+      console.log("Good");
+      break;
+    case (score >= 0.50):
+      console.log("Average");
+      break;
+    default:
+      console.log("Poor");
+  }
+};
+console.log(checkScore(0.76));
+
 
 //5-Use try/catch statements to manage potential errors in the code, such as incorrectly formatted or typed data being fed into your program.
 // Test the isScoreGood method for each learner
