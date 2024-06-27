@@ -1,17 +1,22 @@
 //variables
 const form = document.getElementById("addForm");
-const itemList = document.getElementById("items");
+const itemList = document.querySelector("#items");
+
 
 //form submit event
 form.addEventListener("submit", addItem);
+
 //delete event
 itemList.addEventListener("click", removeItem);
 
 //working on addItem function/////////////
+
 function addItem(e) {
     e.preventDefault();
+    
     //get input value
     const newItem = document.getElementById("item").value;
+
     //create a new li element
     const li = document.createElement("li");
     //add class
@@ -32,6 +37,12 @@ function addItem(e) {
      //append li to list
     itemList.appendChild(li);
 }
+
+function reset(){
+     newItem= "";
+};
+form.addEventListener("submit", reset);
+
 
 //remove item
 function removeItem(e) {
