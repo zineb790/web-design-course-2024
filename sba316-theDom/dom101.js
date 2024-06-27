@@ -1,7 +1,9 @@
 //variables
 const form = document.getElementById("addForm");
 const itemList = document.querySelector("#items");
-
+const title = document.getElementById("title1");
+title.textContent = "create more items";
+title.style.color="teal"
 
 //form submit event
 form.addEventListener("submit", addItem);
