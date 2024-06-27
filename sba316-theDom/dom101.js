@@ -1,31 +1,31 @@
-//variables
+// linking variables
 const form = document.getElementById("addForm");
 const itemList = document.querySelector("#items");
+
 //textContent
 const title = document.getElementById("title1");
 title.textContent = "create more items";
+
 //style
 title.style.color = "teal";
 title.style.textTransform = "capitalize";
+
 //setting attribute
 myInput=document.getElementById("item")
 myInput.setAttribute("placeHolder", "add items");
+
 //looping
 const items = document.getElementsByClassName("list-group-item");
 for (let i = 0; i < items.length; i++){
-   
          items[i].style.backgroundColor = "#eee";
-   
 }
 
 //firstElementChild and lastElementChild
 itemList.firstElementChild.style.fontWeight = "bold";
 itemList.lastElementChild.style.color = "blue";
 
-//form submit event
+//form submit and delete events
 form.addEventListener("submit", addItem);
-
-//delete event
 itemList.addEventListener("click", removeItem);
 
 //working on addItem function/////////////
@@ -57,6 +57,7 @@ function addItem(e) {
     itemList.appendChild(li);
 }
 
+//reset when submitting form
 function reset(){
      newItem= "";
 };
