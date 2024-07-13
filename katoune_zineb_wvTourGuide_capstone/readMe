@@ -1,0 +1,29 @@
+Capstone Objective:
+Create a simple but polished web application using HTML, CSS, and JavaScript, with Figma and Bootstrap (or Tailwind) as supporting technologies.
+Requirements:
+1- Project Structure, Standardization, and Convention
+Project is organized into appropriate files and directories, following best practices.
+Project contains an appropriate level of comments.
+Project is pushed to GitHub, and contains a README file that documents the project, including an overall description of the project.
+Standard naming conventions are used throughout the project.
+The program runs without errors (comment out things that do not work, and explain your blockers - you can still receive partial credit).
+Level of effort displayed in creativity, presentation, and user experience.
+2-Core JavaScript
+Demonstrate proper usage of ES6 syntax and tools.
+Use functions to adhere to the DRY principle.
+Use sound programming logic throughout the application.
+Use appropriate exception handling, as necessary.
+Use appropriate DOM selectors, event listeners, and other tools to create an interactive user experience.
+3-Front-End Development
+Use HTML best practices to create the application’s front-end.
+Use CSS and Bootstrap or Tailwind to style the application.
+Create at least four different views or pages for the application.
+Create some form of navigation that is included across the application’s pages.
+Use a professional design from the Figma Community, Frontend Mentor, or another reputable resource to inspire your application’s design. 
+This does not need to be functional inspiration, just aesthetic inspiration. The goal here is to make your application look polished and professional by basing your UI/UX decisions off of polished, professional designs.
+3-Presentation
+Create a short overview of your application.
+Highlight the use cases of your application.
+Highlight the technical functionality of the application from a high-level perspective.
+Discuss what you have learned through the development of the application.
+Discuss additional features that could be added to the application in the future.
