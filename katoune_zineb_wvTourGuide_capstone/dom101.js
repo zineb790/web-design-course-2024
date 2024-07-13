@@ -21,8 +21,8 @@ for (let i = 0; i < items.length; i++){
 }
 
 //firstElementChild and lastElementChild
-itemList.firstElementChild.style.fontWeight = "bold";
-itemList.lastElementChild.style.color = "blue";
+// itemList.firstElementChild.style.fontWeight = "bold";
+// itemList.lastElementChild.style.color = "blue";
 
 //form submit and delete events
 form.addEventListener("submit", addItem);
