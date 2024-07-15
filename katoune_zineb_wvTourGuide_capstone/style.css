@@ -253,10 +253,11 @@ table a{
 
 /* starting to implement bootstarp for wildlife page */
 
-h1{
-    /* text-align: center; */
+h2{
+    text-align: center;
     margin-bottom: 20px;
     color: orange;
+
 }
 .wild{
 /* display: flex;
